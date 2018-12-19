@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head lang="en">
+		<title>容器指數</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+        <script src="assets/js/liquidFillGauge.js" language="JavaScript"></script>
+        <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+        </style>
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">小黑蚊</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="one.html">容器指數</a></li>
+							<li><a href="two.html">孑孓數量</a></li>
+							<li><a href="three.html">春夏秋冬</a></li>
+							<li><a href="four.html">病媒蚊在哪裡</a></li>
+							<li><a href="Infographic.html">Infographic</a></li>
+							<li><a href="about.html">About Us</a></li>
+
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>容器指數</h1>
+							<h2>每調查100個積水容器，登革熱病媒蚊幼蟲孳生陽性容器之百分比</h2>
+							<p>
+								「積水的容器容易孳生蚊蟲」是我們所熟悉的一句話，
+								<br>我們可以透過容器指數這筆資料來探討登革熱可能會發生的熱區，
+								<br>
+								藉由呈現容器指數比較高的地區，
+								<br>
+								我們可以觀察出哪個地方可能成為登革入的熱區。
+								
+							</p>
+							
+
+							<svg id="fillgauge1" width="20%" height="200" style = "margin-left: 25px"></svg>
+							
+							<svg id="fillgauge2" width="20%" height="200" style = "margin-left: 100px"></svg>
+							
+							<svg id="fillgauge3" width="20%" height="200" style = "margin-left: 100px"></svg>
+							
+							<!-- <h2 style="margin-left: 110px">苗栗縣屏東縣</h2> -->
+							<h2 style="margin-left: 100px">苗栗縣</span><span style="margin-left: 270px">屏東縣</span><span style="margin-left: 260px">南投縣</span></h2>
+							<br>
+							<br>							
+						    <svg id="fillgauge4" width="19%" height="200" style = "margin-left: 230px"></svg>
+							
+							<svg id="fillgauge5" style = "margin-left: 150px" width="19%" height="200" ></svg>
+							<h2 style="margin-left: 310px">高雄市</span><span style="margin-left: 295px">新竹縣</span></h2>
+							<br>
+							
+							<script language="JavaScript">
+							
+
+
+							
+	
+    var config2 = liquidFillGaugeDefaultSettings();
+    config2.circleThickness = 0.1;
+    config2.circleFillGap = 0.2;
+    config2.textVertPosition = 0.8;
+    config2.waveAnimateTime = 2000;
+    config2.waveHeight = 0.3;
+    config2.waveCount = 1;
+	var gauge3 = loadLiquidFillGauge("fillgauge1", 10.22,config2);
+	var gauge3 = loadLiquidFillGauge("fillgauge2", 6.33,config2);
+	var gauge3 = loadLiquidFillGauge("fillgauge3", 4.86,config2);
+	var gauge3 = loadLiquidFillGauge("fillgauge4", 4.82,config2);
+	var gauge3 = loadLiquidFillGauge("fillgauge5", 4.44,config2);
+  
+								</script>
+
+
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>DESIGNED BY</h2>
+								<p>
+									林正曜/秦鋆翰/林庭宇/陳姵蓉/連正如/胡弘林/紀瑞恩
+								</p>
+							</section>
+							
+							<ul class="copyright">
+								<li>&copy; TheLittleBug. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

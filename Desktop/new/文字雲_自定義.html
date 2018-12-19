@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文字雲_自定義</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- 顏色 -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"> -->
+    <link href="css/bootstrap-colorpicker.css" rel="stylesheet">
+    <style type="text/css">
+      .colorpicker-component{margin-top: 10px;}
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".sub").slideUp(0)
+            for(i=0;i<$(".main").length;i++){
+                $(".main:eq("+i+")").mouseover({id:i},function(e){
+                    n=e.data.i
+                    $(".sub:eq("+n+")").slideToggle()
+                    $(".sub:not(:eq("+n+"))").slideUp()
+                })
+                $(".main").mouseout({id:i},function(e){
+                    n=e.data.id
+                })
+            }
+            $("#menu").css("width",$(".main").length*100)
+        })
+    </script>
+
+  </head>
+  <body>
+  <SCRIPT type="text/javascript">
+        function check()
+        {
+                if(reg.fname.value == "") 
+                {
+                        alert("請輸入檔案名稱");
+                }
+                else reg.submit();
+                
+         }
+  </SCRIPT>
+
+  <!-- START: header -->
+  
+  <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">      
+        <a class="probootstrap-logo" data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseThree">
+          文字雲三
+        </a>
+    </div>
+    
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+                       
+            <div class="item">
+            <div class="main">
+              <a href="talk.html">話題列表</a></div>
+            <div class="sub"></div>
+            </div>
+
+            <div class="item">
+            <div class="main">
+              <a href="#">詞頻</a></div>
+            <div class="sub">
+              <ul>
+            <li><a href="freq.html">詞頻一</a></li>
+            <li><a href="freq2.html">詞頻二</a></li> 
+              </ul>
+            </div>
+            </div>
+
+            <div class="item">
+            <div class="main">
+              <a href="#">文字雲</a></div>
+            <div class="sub">
+              <ul>
+            <li><a href="cloud1.html">文字雲一</a></li>
+            <li><a href="cloud2.html">文字雲二</a></li>
+            <li><a href="cloud3.html">文字雲三</a></li>
+              </ul>
+            </div>
+            </div>                      
+        </nav>
+      </div>
+    </div>  
+  </header>
+  <!-- END: header -->
+
+<section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 probootstrap-animate">
+          <form name="reg" action="#" method="post" class="probootstrap-form mb60"> 
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                  <a download href="詞頻上傳範例.xlsx"><i class="fa fa-arrow-circle-down"></i>下載詞頻上傳範例</a> 
+                  <br>
+                  <br>
+                  <p>jdijfa;jfae;agioewcm;aoejoi;</p>
+                  <p>sa;iwegij;skv;oawloievaega;gi</p>
+                  <label style="color:#000000;font-size:18px">上傳excel檔案：</label>
+                  <input id="excelFile" name="excelFile" type="file"> 
+                  <br> 
+                  <br>
+                  <br>
+                  <div class="beside">
+                  </div>
+                  <br>
+                  <input type="button" class="btn btn-primary" id="loadcloud" name="loadcloud" value="文字雲來" onclick="location.href='cloud1_d.html'"/> 
+                  </div>
+              </div>
+            </div>     
+          </form>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  
+
+  </body>
+</html>

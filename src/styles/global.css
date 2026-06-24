@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-hand: "Caveat", cursive;
+  --font-body: "Nunito", sans-serif;
+
+  --color-cream: #fefaf3;
+  --color-rose: #ffb7b7;
+  --color-lavender: #d4bfff;
+  --color-mint: #a8f0d8;
+  --color-yellow: #ffe599;
+  --color-peach: #ffcba4;
+  --color-sky: #b8e0ff;
+  --color-ink: #2d2d2d;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.hl {
+  background: linear-gradient(transparent 35%, var(--hl-color, #ffe59988) 35%);
+  padding: 0 2px;
+}

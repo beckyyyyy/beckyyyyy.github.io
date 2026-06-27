@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import emailIcon from "../assets/icon-email.svg?raw";
-import githubIcon from "../assets/icon-github.svg?raw";
+import { Image } from "astro:assets";
+import avatar from "../assets/img-avatar.png";
 
 const skills = [
   // Markup & Styling
@@ -32,10 +33,10 @@ const skills = [
       <!-- Avatar placeholder -->
       <div class="shrink-0">
         <div
-          class="w-40 h-40 rounded-full border-4 border-ink/10 overflow-hidden bg-rose/30 flex items-center justify-center"
+          class="w-40 h-40 rounded-full border-4 border-ink/10 overflow-hidden bg-rose/30"
           style="box-shadow: 5px 5px 0px #d4bfff"
         >
-          <span class="font-hand text-5xl">✿</span>
+          <Image src={avatar} alt="Avatar" />
         </div>
       </div>
 
@@ -62,10 +63,10 @@ const skills = [
             <!-- Fun facts -->
             <div id="bio-back" class="col-start-1 row-start-1 transition-opacity duration-500 opacity-0 pointer-events-none">
               <ul class="text-lg text-ink/70 leading-relaxed space-y-2">
-                <li>☕ <span class="font-bold text-rose">E</span>nergy source: My brain only starts rendering after a solid cup of morning pour-over.</li>
-                <li>🕵️‍♂️ <span class="font-bold text-yellow">S</span>uspense seeker: I dive into mystery novels just to try and outsmart the author (I usually can't).</li>
-                <li>🎞️ <span class="font-bold text-mint">F</span>ilm enthusiast: Currently at a 50% "aesthetic" and 50% "what was I thinking?" success rate.</li>
-                <li>🐶 <span class="font-bold text-lavender">P</span>up lover: I'm obsessed! No dog yet, but I will definitely have a furry best friend in the future.</li>
+                <li>☕ <span class="font-bold text-2xl text-rose">E</span>nergy source: My brain only starts rendering after a solid cup of morning pour-over.</li>
+                <li>🕵️‍♂️ <span class="font-bold text-2xl text-yellow">S</span>uspense seeker: I dive into mystery novels just to try and outsmart the author (I usually can't).</li>
+                <li>🎞️ <span class="font-bold text-2xl text-mint">F</span>ilm enthusiast: Currently at a 50% "aesthetic" and 50% "what was I thinking?" success rate.</li>
+                <li>🐶 <span class="font-bold text-2xl text-lavender">P</span>up lover: I'm obsessed! No dog yet, but I will definitely have a furry best friend in the future.</li>
               </ul>
             </div>
           </div>
@@ -165,11 +166,13 @@ const skills = [
       back?.classList.add("opacity-0", "pointer-events-none");
       if (icon) icon.textContent = "👉🏼";
       if (label) label.textContent = "click for fun facts";
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       front?.classList.add("opacity-0", "pointer-events-none");
       back?.classList.remove("opacity-0", "pointer-events-none");
       if (icon) icon.textContent = "🔙";
       if (label) label.textContent = "back to the serious stuff";
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   });
 </script>
